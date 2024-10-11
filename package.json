@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.2.1"
+  },
+  "scripts": {
+    "generate-diagrams": "mkdir -p ./diagrams-images && for file in ./diagrams/*.md; do npx mmdc -i \"$file\" -o \"./diagrams-images/${file##*/}.svg\"; done"
+  }
+}
